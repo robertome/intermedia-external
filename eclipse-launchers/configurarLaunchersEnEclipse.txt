@@ -1,0 +1,46 @@
+Para disponer de los launchers en el eclipse, tras importar el proyecto,
+hay que copiar los archivos .launch a la carpeta:
+$workspace/.metadata/.plugins/org.eclipse.debug.core/.launches
+
+Una vez hecho esto reiniciar el eclipse.
+Cuando arranque se deberían ver los lanzadores en 
+el menu Run/Run Configurations... como un lanzador de Java Application
+
+Al lanzar estas aplicaciones con los lanzadores de eclipse,
+es posible ejecutarlas seleccionando el archivo al que
+se quiera ejecutar el comando (En lugar de llamarlo desde linea de comandos y pasarle los parametros)
+
+
+# ValidarXmlContraSchema
+1.- Selecciona un archivo XML en el arbol de eclipse
+2.- Ejecutar el lanzador de ValidarXmlContraSchemaCmd
+3.- Se abrirá una ventana para seleccionar el schema contra el que validar
+4.- Se devuelve resultado por consola de eclipse
+
+# FirmarXmlSoap
+1.- Selecciona un archivo XML en el arbol de eclipse
+2.- Ejecutar el lanzador de FirmarXmlSoapCmd
+3.- Se abrirá una ventana para seleccionar el archivo crypto.properties a utilizar
+4.- Se abrirá una ventana donde introducir el tipo de firma a utilizar: XMLDSig, WSSecurity, WSSTSA, XAdES
+5.- Se devuelve resultado por consola de eclipse y se obtiene en el mismo 
+	directorio del archivo seleccionado un archivo con extension "_firmado.xml"
+	
+# ValidarFirmaXmlSoap
+1.- Selecciona un archivo XML en el arbol de eclipse
+2.- Ejecutar el lanzador de ValidarFirmaXmlSoapCmd
+3.- Se abrirá una ventana para seleccionar el archivo crypto.properties a utilizar
+4.- Se devuelve resultado por consola de eclipse
+
+# ExportarRequisitosTablaWordHaciaXmlTestLink
+1.- Selecciona un archivo ".doc" que contenga una tabla de requisitos
+2.- Ejecutar el lanzador de ExportarRequisitosTablaWordHaciaXmlTestLinkCmd
+4.- Se obtiene en el mismo directorio del archivo seleccionado un archivo con los requisitos 
+	en formato XML que se podrá importar en el TestLink 	
+	
+	
+	 
+
+
+
+
+
