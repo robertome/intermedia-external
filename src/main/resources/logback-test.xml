@@ -1,0 +1,38 @@
+<configuration>
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d{MMM dd yyyy HH:mm:ss,SSS} %-5p %c - %msg%n</Pattern>
+		</layout>
+	</appender>
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${catalina.home}/logs/catastro.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>${catalina.home}/logs/catastro.%i.log</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>10</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>5MB</maxFileSize>
+		</triggeringPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+		</layout>
+	</appender>
+	
+	<!--  -->
+	<!-- APLICACION -->
+	<!--  -->
+	<logger name="es.mpr" additivity="false">
+		<level value="INFO"/>
+		<appender-ref ref="CONSOLE"/>
+	</logger>
+	
+	
+	<!--  -->
+	<!-- RESTO DE LIBRERIAS -->
+	<!--  -->
+	<root>
+		<level value="INFO"/>
+		<appender-ref ref="CONSOLE"/>
+	</root>
+</configuration>
