@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>core</artifactId>
+		<groupId>es.mpr.intermedia</groupId>
+		<version>2.1.0.3-SNAPSHOT</version>
+	</parent>
+	<groupId>es.mpr.intermedia</groupId>
+	<artifactId>intermedia-external-utils</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>intermedia-external-utils</name>
+	<description>Utilidades para probar servicios de intermediacion</description>
+	<dependencies>
+		<dependency>
+			<groupId>es.mpr.intermedia</groupId>
+			<artifactId>core-model</artifactId>
+			<version>2.1.0.3-SNAPSHOT</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-scratchpad</artifactId>
+			<version>3.8</version>
+		</dependency>
+		<!-- JAXB - API -->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.2.6</version>
+		</dependency>
+		<!-- JAXB - Reference Impl -->
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>2.2.6</version>
+		</dependency>
+		<!-- JAXB - XJC Generador de clases 
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-xjc</artifactId>
+			<version>2.2.6</version>
+		</dependency>
+		-->
+		<!-- JAXB - Eclipse Impl (MOXy) 
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>org.eclipse.persistence.moxy</artifactId>
+			<version>2.4.0</version>
+		</dependency>
+		-->
+	</dependencies>
+
+	<!-- ============================================================= -->
+	<!-- Repositorios Maven utilizados en el proyecto. -->
+	<!-- ============================================================= -->
+	<repositories>
+		<repository>
+			<id>eclipselink.maven.repo</id>
+			<name>eclipselink.maven.repo</name>
+			<url>http://download.eclipse.org/rt/eclipselink/maven.repo</url>
+		</repository>
+
+	</repositories>
+</project>
